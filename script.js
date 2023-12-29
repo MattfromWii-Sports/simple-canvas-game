@@ -28,8 +28,8 @@ mnImage.src = "images/monster.png";
 //
 let hero = {
     speed: 256,
-    x: 0,
-    y: 0
+    x: canvas.width / 2 - 16,
+    y: canvas.height / 2 - 16
 };
 let monster = {
     x: 0,
@@ -48,8 +48,6 @@ addEventListener("keyup", function(e) {
 
 //
 const reset = function() {
-    hero.x = canvas.width / 2;
-    hero.y = canvas.width / 2;
     monster.x = 32 + (Math.random() * (canvas.width - 64));
     monster.y = 32 + (Math.random() * (canvas.height - 64));
 };
